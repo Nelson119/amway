@@ -1,0 +1,61 @@
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(255,255,255,0.5);
+	transition-duration: 0.3s;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: rgba(255,255,255,0.5);
+	opacity:  1;
+	transition-duration: 0.3s;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: rgba(255,255,255,0.5);
+	opacity:  1;
+	transition-duration: 0.3s;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: rgba(255,255,255,0.5);
+	transition-duration: 0.3s;
+}
+.form-control:focus::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	opacity: 0.25;
+}
+.form-control:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	opacity: 0.25;
+}
+.form-control:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+	opacity: 0.25;
+}
+.form-control:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	opacity: 0.25;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(255,255,255,0.5);
+	transition-duration: 0.3s;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: rgba(255,255,255,0.5);
+	opacity:  1;
+	transition-duration: 0.3s;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: rgba(255,255,255,0.5);
+	opacity:  1;
+	transition-duration: 0.3s;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: rgba(255,255,255,0.5);
+	transition-duration: 0.3s;
+}
+:focus::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	opacity: 0.25;
+}
+:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	opacity: 0.25;
+}
+:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+	opacity: 0.25;
+}
+:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	opacity: 0.25;
+}

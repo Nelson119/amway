@@ -1,0 +1,55 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+
+$main-font: 'Noto Sans TC';
+$main-font-fallback:'Lantinghei','Noto Sans TC', 'microsoft jhenghei', '微軟正黑體', 'Segoe UI', 'Arial', 'Verdana';
+$base-font-size: vwxs(13);
+$base-font-size-num: 13;
+$base-font-size-sm: vwxs(10);
+
+.font-default{
+	font-family: $main-font, $main-font-fallback, cursive;
+}
+.fontsize-reset {
+	font-size: $base-font-size;
+}
+
+
+$browser-xs-viewport: 375; // Default
+$browser-sm-viewport: 768; // Default
+$browser-lg-viewport: 1366; // Default
+
+@function vw768($pixels, $context: $browser-sm-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
+@function vwxs($pixels, $context: $browser-xs-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
+@function vw1366($pixels, $context: $browser-lg-viewport) {
+  @return #{$pixels/$context*100}vw;
+}
+
+@mixin linear-gradient($direction, $color-stops) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@for $i from 11 to 44 {
+	.fontsize-#{$i} {
+		font-size: vwxs($i);
+	}
+}
+$font-default-color: #fff;
+$font-default-hover-color: #efefef;
+$font-white-color: #fff;

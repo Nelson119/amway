@@ -1,4 +1,16 @@
 
 /* Custom page header */
 footer {
+	height: vwxs(44);
+	color: #56565a;
+	font-weight:lighter;
+	a{
+		color: inherit!important;
+		&+a{
+			&:before{
+				content:'|   ';
+				padding: 0 vwxs(5);
+			}
+		}
+	}
 }

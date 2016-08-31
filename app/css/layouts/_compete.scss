@@ -1,0 +1,41 @@
+.compete {
+	background: #fff;
+	border: vwxs(1) solid #b6b6b6;
+	border-radius: vwxs(3);
+	margin-top:vwxs(20);
+	margin-left:vwxs(5);
+	margin-right:vwxs(5);
+	color: #56565a;
+
+	height: auto;
+	overflow: hidden;
+	transition: height 0.25s ease-out;
+
+	.cap{
+		border-bottom: vwxs(1) solid #b6b6b6;
+		line-height: vwxs(35);
+		padding: 0 vwxs(40);
+		font-weight: lighter;
+		position: relative;
+		.name{
+			color: #008fc5;
+		}
+	}
+	.cat{
+		margin-left: 0.6em;
+		margin-right: 0em;
+		line-height: 3.5em;
+		font-weight: 100;
+		padding: vwxs(10) 0 vwxs(15);
+
+		aside{
+			padding: 0;
+		}
+
+		a{
+			border: vwxs(1) solid #b6b6b6;
+			padding: 0.3em 1.5em;
+			color: inherit;
+		}
+	}
+}

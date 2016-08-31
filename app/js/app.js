@@ -6,30 +6,14 @@
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
 /*global  $ */
 var app = {};
+// 全域使用的物件
+app.global = {};
 app.partial = {};
-
-// var dayOfMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+app.module = {};
 
 // 網址為 gulp 或者 github 時 設定成debug 模式
 var debug = /localhost[:]9000|nelson119.github.io/.test(location.href);
 
-var share = {
-	facebook: function(href, title){
-		href = encodeURIComponent(href || location.href + '?utm_source=facebook&utm_medium=fbshare_m&utm_campaign=roseanni');
-		title = encodeURIComponent(title || document.title);
-		window.open('https://www.facebook.com/sharer.php?u='+href+'&amp;t='+title);
-	},
-	googleplus: function(href){
-		href = encodeURIComponent(href || location.href + '?utm_source=g+&utm_medium=fbshare_m&utm_campaign=roseanni');
-		window.open('https://plus.google.com/share?url=' + href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-	},
-	email: function(href, title){
-		href = encodeURIComponent(href || location.href + '?utm_source=email&utm_medium=fbshare_m&utm_campaign=roseanni');
-		title = encodeURIComponent(title || document.title);
-		var body = encodeURIComponent(''+href+' #' +title+'');
-		window.open('https://mail.google.com/mail/?view=cm&fs=1&to=&su=與你分享:'+title+'&body='+body+'&bcc=');
-	}
-};
 
 
 $(function(){
@@ -42,36 +26,14 @@ $(function(){
 
 	//觸發第一次調整頁面尺寸
 	$(window).trigger('resize');
-	//分享按鈕
 
-	$('.share .facebook').on('click', function(e){
-		share.facebook();
-
-		e.stopPropagation();
-
-		e.preventDefault();
-
-		return false;
+	$('.burger').on('click', function(){
+		$('header nav').toggleClass('on');
+		$('header .menu-overlay').toggleClass('hide');
 	});
-
-	$('.share .googleplus').on('click', function(e){
-		share.googleplus();
-
-		e.stopPropagation();
-
-		e.preventDefault();
-
-		return false;
-	});
-
-	$('.share .email').on('click', function(e){
-		share.email();
-
-		e.stopPropagation();
-
-		e.preventDefault();
-
-		return false;
+	$('header .menu-overlay').on('click', function(){
+		$('header nav').removeClass('on');
+		$('header .menu-overlay').addClass('hide');
 	});
 
 });
@@ -90,3 +52,29 @@ $.fn.hasAttr = function(attributeName){
 };
 
 
+var message = {};
+
+message.confirm = function (msg, callback) {
+    $('#confirm .text').html(msg.content);
+    $('#confirm')
+        .css('z-index', '100')
+        .removeClass('hide')
+        .addClass('in');
+    $('#btnMessageConfirm').html(msg.confirm).unbind('click').on('click', function () {
+
+        callback();
+        $('#confirm').removeClass('in');
+        setTimeout(function () {
+            $('#confirm').addClass('hide');
+        }, 300);
+    });
+    $('#btnMessageCancel').html(msg.cancel).unbind('click').on('click', function () {
+        $('#confirm').removeClass('in');
+        setTimeout(function () {
+            $('#confirm').addClass('hide');
+        }, 300);
+    });
+
+};
+app.global. message = message;
+var global = app.global;

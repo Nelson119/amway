@@ -5,19 +5,16 @@ $icon-font-path: '../fonts/';
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-@import "common/variables1";
-@import "common/global1";
+@import "common/variables";
+@import "common/global";
 @import "common/webfonts";
-@import "common/form-control";
-@import "common/placeholder";
-@import "common/section";
 
-
-@import "layouts/header1";
-@import "layouts/footer1";
+@import "layouts/header";
+@import "layouts/footer";
 
 @import "layouts/index";
-
-
+@import "layouts/travel";
+@import "layouts/compete";
+@import "layouts/bonus";
 
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <title>我的事業</title>
+    <title>海外旅遊積分</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -53,22 +53,89 @@
     <section class="container">
 
       <!-- 頁面內容 -->
-      <aside class="content index">
+      <aside class="content">
 
-        <aside class="row fontsize-xs-18 text-center">
-          <section class="grid col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <a href="javascript:"><span>業績管理</span></a>
-          </section>
-          <section class="grid col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <a href="bonus.html"><span>獎金收入</span></a>
-          </section>
-          <section class="grid col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <a href="travel.html"><span>海外旅遊積分</span></a>
-          </section>
-          <section class="grid col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            <a href="compete.html"><span>年度特別<br>獎勵辦法/競賽</span></a>
-          </section>
-        </aside>
+        <section class="row">
+
+          <!-- 新制 -->
+          <aside class="travel new-protocol">
+            <section class="cap fontsize-xs-18">
+              <span class="name">新制</span>
+              <span>至上月底: </span>
+              <span>35,000.28</span>
+              <a class="cls" href="javascript:"></a>
+            </section>
+            <input type="checkbox" checked="" name="expand">
+            <figure data-complete-percent="44.55">
+              <svg x="0px" y="0px" viewBox="0 0 38.461538461538463 38.461538461538463">
+                <circle cx="19.23076923076923" cy="19.23076923076923" r="15.865384615384615" fill="#fff" stroke="#f5d315" stroke-width="6.730769230769231" stroke-miterlimit="10"/>
+                <circle cx="19.23076923076923" cy="19.23076923076923" r="15.865384615384615" fill="none" stroke="#edeceb" stroke-width="6.730769230769231" stroke-miterlimit="10" stroke-dashoffset="0" stroke-dasharray="100"/>
+              </svg>
+              <figcaption class="text-center">
+                <span class="fontsize-xs-20">達成率</span>
+                <span class="fontsize-xs-22 highlight">0</span>
+                <span class="fontsize-xs-22 highlight">%</span>
+              </figcaption>
+              <section class="detail fontsize-xs-18">
+                <aside class="row">
+                  <span class="col-xs-6">目標值</span>
+                  <span class="highlight col-xs-6 score">135,000</span>
+                  <span class="col-xs-6">目前達成積分</span>
+                  <span class="highlight col-xs-6 score">
+                    <span class="pull">35,000.28</span>
+                  </span>
+                  <span class="col-xs-6">差距</span>
+                  <span class="highlight col-xs-6 score">
+                    <span class="pull">99999.72</span>
+                  </span>
+                  <span class="col-xs-12 alfa">下次旅遊出席第<span class="highlight">      2      </span>次</span>
+                </aside>
+              </section>
+            </figure>
+          </aside>
+          <!-- /.新制 -->
+
+          <!-- 舊制 -->
+          <aside class="travel origin-protocol">
+            <section class="cap fontsize-xs-18">
+              <span class="name">舊制</span>
+              <span>至上月底: </span>
+              <span>28,000.28</span>
+              <a class="cls" href="javascript:"></a>
+            </section>
+            <input type="checkbox" checked="" name="expand">
+            <figure data-complete-percent="33.08">
+              <svg x="0px" y="0px" viewBox="0 0 38.461538461538463 38.461538461538463">
+                <circle cx="19.23076923076923" cy="19.23076923076923" r="15.865384615384615" fill="#fff" stroke="#f5d315" stroke-width="6.730769230769231" stroke-miterlimit="10"/>
+                <circle cx="19.23076923076923" cy="19.23076923076923" r="15.865384615384615" fill="none" stroke="#edeceb" stroke-width="6.730769230769231" stroke-miterlimit="10" stroke-dashoffset="0" stroke-dasharray="100"/>
+              </svg>
+              <figcaption class="text-center">
+                <span class="fontsize-xs-20">達成率</span>
+                <span class="fontsize-xs-22 highlight">0</span>
+                <span class="fontsize-xs-22 highlight">%</span>
+              </figcaption>
+              <section class="detail fontsize-xs-18">
+                <aside class="row">
+                  <span class="col-xs-6">目標值</span>
+                  <span class="highlight col-xs-6 score">73,00</span>
+                  <span class="col-xs-6">目前達成積分</span>
+                  <span class="highlight col-xs-6 score">
+                    <span class="pull">28,000.28</span>
+                  </span>
+                  <span class="col-xs-6">差距</span>
+                  <span class="highlight col-xs-6 score">
+                    <span class="pull">0.00</span>
+                  </span>
+                  <span class="col-xs-12 alfa">下次旅遊出席第<span class="highlight count text-center">      2      </span>次</span>
+                </aside>
+              </section>
+            </figure>
+          </aside>
+          <!-- /.舊制 -->
+
+          
+        </section>
+        
       </aside>
       <!-- /.頁面內容 -->
 
@@ -129,8 +196,8 @@
     <script src="js/app.js"></script>
     <script src="js/ga.js"></script>
     <!-- endbuild -->
-    <!-- build:js js/form/index.js -->
-    <script src="js/index.js"></script>
+    <!-- build:js js/form/travel.js -->
+    <script src="js/travel.js"></script>
     <!-- endbuild -->
   </body>
 </html>

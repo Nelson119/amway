@@ -60,13 +60,17 @@ body {
 	font-feature-settings: "liga";
 	font-style: normal;
 	text-rendering: optimizelegibility;
-	font-family: $main-font,cursive;
+	font-family: $main-font,cursive !important;
 	font-size: $base-font-size;
 	letter-spacing:0.5px;
 	word-spacing:0.5px;
 	overflow-x:hidden;
 	color: $font-default-color;
 	position:relative;
+
+	background: #ededed!important;
+	// min-height: 100vh;
+
 
 	::selection,::-moz-selection {
 		background:rgba(0,0,0,0.05);
@@ -105,12 +109,22 @@ body {
 		}
 	}
 
+	.content{
+		min-height: calc(100vh - 12vw - 12vw);
+		padding-bottom:vwxs(20);
+		>.row{
+			margin: 0;
+		}
+	}
+
 }
 
 html{
 	min-width: 320px;
 	.container{
 		min-width: 320px;
+		margin-top: 45px;
+		overflow-y: hidden;
 	}
 	&.ie,&.firefox.windows{
 		body{
@@ -164,7 +178,8 @@ html{
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 	.container {
-		max-width: 1200px;
+		// max-width: 1200px;
+		width: 100%;
 	}
 
   /* Remove the padding we set earlier */

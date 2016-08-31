@@ -1,0 +1,153 @@
+input[type=text]{
+}
+.form-control{
+	border-radius: none;
+	background:none;
+	box-shadow: none;
+	border: 0;
+	color: inherit;
+	font-size: inherit;
+	line-height: vwxs(32);
+	vertical-align: top;
+	margin: 0 0 0 vwxs(40) ;
+	// height: vwxs(24);
+	padding: 0;
+	font-family: inherit;
+	display:inline-block;
+	max-width:  vwxs(200) ;
+	box-shadow: none;
+
+	&:focus{
+		box-shadow: none;
+		border-color: #fff;
+		~.icon{
+			opacity: 1;
+		}
+	}
+	height: auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.form-control-container{
+	border: vwxs(1) solid #fff;
+	border-radius: vwxs(5);
+	position: relative;
+	&+.form-control-container{
+		margin-top: 1.5em;
+	}
+	.icon{
+		position: absolute;
+		top: vwxs(6);
+		left: vwxs(12);
+		max-width: vwxs(22);
+		max-height: vwxs(22);
+		opacity: 0.5;
+		transition-duration: 0.3s;
+		margin-top: 0;
+	}
+}
+.has-error{
+	border-color: #f00;
+	background: rgba(255,0,0,0.1);
+	color: rgba(255,255,255,0.75);
+	border-radius: vwxs(5);
+	.form-control:focus{
+		box-shadow: none;
+	}
+}
+
+select.form-control{
+	border: vwxs(1) solid #fff;
+	border-radius: vwxs(5);
+	position: relative;
+	height:vwxs(36);
+	margin:0;
+	-webkit-appearance:none;
+	appearance:none;
+
+	option{
+		background: #1e5799;
+		border: vwxs(1) solid #1e5799;
+		&:hover{
+			color: #1e5799;
+			background: #fff;
+		}
+	}
+}
+
+.btn-default{
+    background: #004374 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 1.33333vw;
+    color: #fff;
+    display: inline-block;
+    font-family: inherit;
+    height: 16vw;
+    line-height: 16vw;
+    margin: 7.2vw 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    transition: background 0.2s ease-out 0s;
+    vertical-align: middle;
+    width: 60.2667vw;
+	&:focus{
+		outline: none;
+	}
+	&:hover,&:focus,&:active{
+		background: #003161 !important;
+		color: inherit !important;
+	}
+	// &:focus{
+	// 	padding:0;
+	// 	&:before{
+	// 		opacity: 1;	
+	// 	}
+	// 	&:after{
+	// 		border-color: rgba(0, 49, 97, .3);
+	// 	}
+	// }
+	// &:before{
+	// 	width: vwxs(120);
+	// 	height: vwxs(120);
+	// 	margin: vwxs(-6) 0 0 vwxs(-6);
+	// 	background: rgba(0, 49, 97, .5);
+	// 	content: '';
+	// 	position: absolute;
+	// 	border-radius: 50%;
+	// 	left:0;
+	// 	top:0;
+	// 	opacity: 0;
+	// 	z-index: -1;
+	// 	transition-duration: 0.3s;
+	// }
+	// &:after{
+	// 	width: vwxs(130);
+	// 	height: vwxs(130);
+	// 	margin: vwxs(-11) 0 0 vwxs(-11);
+	// 	border: vwxs(10) rgba(0, 49, 97, 0) solid;
+	// 	content: '';
+	// 	position: absolute;
+	// 	border-radius: 50%;
+	// 	left:0;
+	// 	top:0;
+	// 	transition-duration: 0.3s;
+	// 	transition-delay: 0.1s;
+	// }
+}
+.btn-container{
+	a{
+		padding:vwxs(0) vwxs(10) 0  vwxs(15);
+		line-height: vwxs(20);
+		height: vwxs(22);
+		display: inline-block;
+
+		&+a{
+			border-left: vwxs(1) solid #fff;
+		}
+	}
+}

@@ -39,7 +39,7 @@ $brand-primary:         #27ae60;
 	unicode-range: U+00-024F;
 }
 
-$main-font: 'Noto Sans TC';
+$main-font: 'Verdana', 'Noto Sans TC';
 $main-font-fallback:'Arial', 'Verdana', 'Lantinghei','Noto Sans TC', 'microsoft jhenghei', '微軟正黑體', 'Segoe UI';
 $base-font-size: 13px;
 $base-font-size-num: 13;
@@ -52,7 +52,7 @@ $base-font-size-sm: 10px;
 	font-size: $base-font-size;
 }
 
-$browser-xs-viewport: 320; // Default
+$browser-xs-viewport: 375; // Default
 $browser-sm-viewport: 768; // Default
 $browser-lg-viewport: 1366; // Default
 
@@ -80,14 +80,20 @@ $browser-lg-viewport: 1366; // Default
 	}
 }
 
-@for $i from 6 to 150 {
-	.fontsize-sm-#{$i} {
-		@media screen and (max-width: 768px) {
-			font-size: vwsm($i);
+// @media screen and (max-width: 320px) {
+	@for $i from 6 to 150 {
+		.fontsize-xs-#{$i} {
+			font-size: vwxs($i);
+		}
+		.form-control.fontsize-xs-#{$i} {
+			font-size: vwxs($i);
+		}
+		.fontsize-xs-#{$i} .form-control {
+			font-size: vwxs($i);
 		}
 	}
-}
+// }
 
-$font-default-color: #000;
-$font-default-hover-color: #333;
+$font-default-color: #fff;
+$font-default-hover-color: #efefef;
 $font-white-color: #fff;
