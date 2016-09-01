@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>延伸續約</title>
+<!-- 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css"> -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+
+    <!-- build:css css/login.css -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- endbuild -->
+
+    <!-- build:css css/theme.css -->
+    <link rel="stylesheet" href="css/theme.css">
+    <!-- endbuild -->
+    
+    <!-- build:js js/lib/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/detectizr/dist/detectizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body class="login section">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+     
+    <header>
+      <h1 class="vertical-middle text-center">
+        <a href="http://amway.com"></a>
+        <span class="tagline fontsize-16 font-normal">我的事業</span>
+      </h1>
+      <!-- <aside class="float-right fontsize-18">
+        <form class="search-form">
+          <aside class="form-control-container">
+            <input class="form-control fontsize-24" type="password" name="password" placeholder="功能搜尋">
+            <i class="search"></i>
+          </aside>
+        </form>
+      </aside> -->
+    </header>
+    <section class="container">
+
+      <div class="fontsize-24 col-xs-12 col-sm-12">
+        <div class="subcut">
+            <%=RenewalHead %>
+        </div>
+        <div class="subcut">
+            <%=RenewalDist %>
+        </div>
+      </div>
+      <form class="fontsize-24 col-xs-12 col-sm-12 login-form">
+        <div class="form-group">          
+          <aside class="row">
+            <div class="col-sm-2 col-xs-2">
+              <input type="radio" name="paytype" value="008" id="paytype3" class="form-control" />
+            </div>
+            <div class="col-sm-10 col-xs-10">
+              <label for="paytype3">渣打銀行寰宇卡</label>
+            </div>
+          </aside>
+        </div>
+        <div class="form-group">
+          <aside class="row">
+            <div class="col-sm-2 col-xs-2">
+              <input type="radio" name="paytype" value="010" id="paytype4" class="form-control" />
+            </div>
+            <div class="col-sm-10 col-xs-10">
+              <label for="paytype4">聯邦銀行精英卡</label>
+            </div>
+          </aside>
+        </div>
+        <div class="form-group">
+          <aside class="row">
+            <div class="col-sm-2 col-xs-2">
+              <input type="radio" name="paytype" value="042" id="paytype5" class="form-control" />
+            </div>
+            <div class="col-sm-10 col-xs-10">
+              <label for="paytype5">其它信用卡</label>
+            </div>
+          </aside>
+        </div>
+        <aside class="collapse" id="cardInfo">
+          <div class="form-group">
+            <aside class="row">
+              <div class="col-sm-6 col-xs-6">
+                  信用卡卡號</div>
+            </aside>
+          </div>
+          <div class="form-group">
+            <aside class="row">
+              <div class="col-sm-12 col-xs-12">
+                <aside class="form-control-container">
+                  <input style="margin:0;width:100%;display:inline-block;max-width:none;padding:0.2em;" type="tel" name="card" class="form-control fontsize-24" maxlength="16" >
+                </aside>
+              </div>
+            </aside>
+          </div>
+          <div class="form-group">
+            <aside class="row">
+              <div class="col-sm-6 col-xs-6">
+                  到期日</div>
+              <div class="col-sm-6 col-xs-6">&nbsp;</div>
+            </aside>
+          </div>
+          <div class="form-group">
+            <aside class="row">
+              <div class="col-sm-3 col-xs-3 col-sm-offset-1 col-xs-offset-1">
+                <select name="month" class="form-control">
+                  <option value=""></option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="col-sm-2 col-xs-2 text-left">
+                月
+              </div>
+              <div class="col-sm-3 col-xs-3 text-left">
+                <select name="year" class="form-control">
+                  <option value=""></option>
+                    <script>
+                        var yearint = new Date().getYear() - 100;
+                        for (var i = 0; i < 10; i++)
+                        {
+                            var str = (yearint + i) < 10 ? '0' + (yearint + i) : (yearint + i);
+                            document.write("<option value="+str+">"+str+"</option>");
+                        }
+                    </script>
+                </select>
+              </div>
+              <div class="col-sm-2 col-xs-2">年</div>
+            </aside>
+          </div>
+        </aside>
+        <aside class="collapse" id="cardInfoDetail">
+          <div class="form-group">
+            <aside class="row">
+              <div class="col-sm-6 col-xs-6 text-left">
+              背面末三碼</div>
+              <div class="col-sm-6 col-xs-6 text-left">
+                <aside class="form-control-container">
+                  <input type="tel" name="cardback" class="form-control" maxlength="3" />
+                </aside>
+              </div>
+              <div class="col-sm-12 col-xs-12 text-left">
+                選擇付款方式為信用卡者， 必須為付款人本人，安麗網站交易採用
+                <div class="verisign"></div>
+                VeriSign驗證。
+              </div>
+            </aside>
+          </div>
+        </div>
+        <aside class="col-xs-12 col-sm-12 text-center fade" id="submit">
+          <button class="btn-default">確定續約</button>
+        </aside>
+      </form>
+    </div>
+    </section>
+    <footer class="vertical-middle text-center fontsize-14">
+      <p class="text-center"><a href="javascript:">切換為電腦版</a><br> &copy; 2016 Amway</p>
+    </footer>
+
+    <aside id="message" class="message fontsize-18 fade hide">
+      {message}
+    </aside>
+    <aside id="confirm" class="message fontsize-22 fade hide">
+      <span class="text">{message}</span>
+      <aside class="row fontsize-reset">
+        <aside class="col-xs-6 col-sm-6 text-center fontsize-12">
+          <button id="btnMessageCancel" class="btn-default">{{cancel}} </button>
+        </aside>
+        <aside class="col-xs-6 col-sm-6 text-center fontsize-12">
+          <button id="btnMessageConfirm" class="btn-default">{{confirm}} </button>
+        </aside>
+      </aside>
+    </aside>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      // (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      // function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      // e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      // e.src='https://www.google-analytics.com/analytics.js';
+      // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      // ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js js/lib/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js js/lib/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js js/app.js -->
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/form/renew.js -->
+    <script src="js/renew.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
