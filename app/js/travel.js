@@ -10,8 +10,12 @@ app.partial.travel = function(){
 	$('.travel .cls').on('click', function(){
 		var travel = $(this).parents('.travel');
 		var perc = $('figure', travel).attr('data-complete-percent') * 1;
+
 		if(!travel.hasClass('on')){
 			travel.addClass('on').siblings().removeClass('on');
+			if(perc === 0){
+				return;
+			}
 
 
 			$('svg circle', travel).css('stroke-dashoffset', perc);

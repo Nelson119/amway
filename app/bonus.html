@@ -58,7 +58,7 @@
         <section class="row"> 
 
           <!--月結獎金收入-->
-          <aside class="bonus fontsize-xs-18">
+          <aside class="bonus fontsize-xs-18 monthly">
 
             <section class="cap row">
               <aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -67,7 +67,22 @@
                 </aside>
                 <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fontsize-xs-12">
                   <section>
-                    <input class="form-control" type="month" name="month">
+                    <select name="month" class="form-control">
+                      <option value="">請選擇月份</option>
+                        <script>
+                            var yearint = new Date().getYear() + 1900;
+                            var monthint = new Date().getMonth() + 1;
+
+                            for (var i = 0; i < 13; i++)
+                            {
+                                var str = ( monthint - i > 0) ? yearint + ' 年 ' + (monthint - i) + '月' :
+                                  (yearint - 1) + ' 年 ' + (monthint - i + 12) + '月';
+                                var val = ( monthint - i > 0) ? yearint + ',' + (monthint - i) :
+                                  (yearint - 1) + ',' + (monthint - i + 12);
+                                document.write("<option value="+val+">"+str+"</option>");
+                            }
+                        </script>
+                    </select>
                   </section>
                 </aside>
               </aside>
@@ -95,22 +110,25 @@
                     二代健保
                   </section>
                 </aside>
-                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-                  <section>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right result fade hide">
+                  <section data-field="summary">
                     NT$78,384 <!-- 本月獎金 -->
                   </section>
-                  <section>
+                  <section data-field="refund">
                     (NT$47,531) <!-- 退貨/其他 -->
                   </section>
-                  <section>
+                  <section data-field="revenue">
                     NT$30,853 <!-- 實得獎金 -->
                   </section>
-                  <section>
+                  <section data-field="tax">
                     -NT$11,964 <!-- 扣繳稅額 -->
                   </section>
                   <section>
-                    <span class="t">-NT$1,480</span> <!-- 二代健保 -->
+                    <span data-field="healthCare" class="t">-NT$1,480</span> <!-- 二代健保 -->
                   </section>                
+                </aside>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fade in notfound">
+                  無資料。
                 </aside>
 
                 <hr class="col-lg-11 col-md-11 col-sm-11 col-xs-11 upon-line">
@@ -118,8 +136,11 @@
                 <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">                
                   實領金額
                 </aside>
-                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right highlight">
+                <aside data-field="final" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right highlight result fade hide">
                   NT$17,490 <!-- 實領金額 -->
+                </aside>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fade in notfound">
+                  無資料。
                 </aside>
 
                 <hr class="col-lg-11 col-md-11 col-sm-11 col-xs-11 below-line">
@@ -136,7 +157,7 @@
           <!--/.月結獎金收入-->
 
           <!--年度獎金收入-->
-          <aside class="bonus fontsize-xs-18">
+          <aside class="bonus fontsize-xs-18 yearly">
 
             <section class="cap row">
               <aside class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -144,8 +165,10 @@
                   <span class="name">年度獎金收入</span>
                 </aside>
                 <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fontsize-xs-12">
-                  <select class="form-control" name="">
-                    <option>翡翠獎金</option>
+                  <select class="form-control" name="category">
+                    <option value="">請選擇類型</option>
+                    <option value="jade">翡翠獎金</option>
+                    <option value="diamond">鑽石獎金</option>
                   </select>
                 </aside>
               </aside>
@@ -168,13 +191,16 @@
                     稅
                   </section>
                 </aside>
-                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
-                  <section>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right result fade hide">
+                  <section data-field="revenue">
                     NT$100,000 <!-- 獎金收入 -->
                   </section>
-                  <section>
+                  <section data-field="tax">
                     (NT$2,000) <!-- 稅 -->
                   </section>        
+                </aside>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fade in notfound">
+                  無資料。
                 </aside>
 
                 <hr class="col-lg-11 col-md-11 col-sm-11 col-xs-11 upon-line">
@@ -182,8 +208,11 @@
                 <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                   實領金額
                 </aside>
-                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right highlight">
+                <aside data-field="final" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right highlight result fade hide">
                   NT$98,000 <!-- 實領金額 -->
+                </aside>
+                <aside class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fade in notfound">
+                  無資料。
                 </aside>
 
                 <hr class="col-lg-11 col-md-11 col-sm-11 col-xs-11 below-line">

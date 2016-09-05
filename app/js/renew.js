@@ -30,14 +30,13 @@ app.partial.login = function(){
 
 	//選擇卡類型後 顯示填寫卡號的部分
 	$('[name=paytype]').on('click change', function(){
-		$('#cardInfo').addClass('in');
-	});
-
-
-	//填寫卡號後 顯示填寫背後三碼的部分
-	$('[name=card],[name=month],[name=year]').on('input change', function(){
-		if($('[name=card]').val() && $('[name=year]').val() && $('[name=month]').val()){
+		if($('#paytype3').is(':checked') || $('#paytype4').is(':checked')){
 			$('#cardInfoDetail').addClass('in');
+			$('#cardInfo').removeClass('in');
+		}
+		else if($('#paytype5').is(':checked')){
+			$('#cardInfoDetail').addClass('in');
+			$('#cardInfo').addClass('in');
 		}
 	});
 	//填寫卡號後 顯示送出按鈕

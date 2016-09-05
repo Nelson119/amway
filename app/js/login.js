@@ -27,11 +27,41 @@ app.partial.login = function(){
 
 
 	}());
-            app.global.message.confirm({
-                content: '您的直銷商/生活會員權利已到期，提醒您可以於線上完成續約以保障相關權益。欲辦理續約<br>請點選「續約」。',
-                confirm: '續約',
-                cancel: '取消'
-            }, function () {
-                setTimeout(function () { location.href = 'renew.aspx'; }, 100);
-            });
+            // app.global.message.confirm({
+            //     content: '您的直銷商/生活會員權利已到期，提醒您可以於線上完成續約以保障相關權益。欲辦理續約<br>請點選「續約」。',
+            //     confirm: '續約',
+            //     cancel: '取消'
+            // }, function () {
+            //     setTimeout(function () { location.href = 'renew.aspx'; }, 100);
+            // });
+
+	TweenMax.to('header h1', 1, {
+		opacity: 1,
+		marginTop: 0,
+		delay: 0.5
+	});
+    TweenMax.to('header', 1.2, {
+		height: $('header h1').outerHeight(),
+		delay: 1
+	});
+    TweenMax.to('.login form, .login footer', 1.2, {
+    	marginTop: 0,
+    	opacity: 1,
+		delay: 1.5,
+		scaleY: 1
+	});
 };
+TweenMax.set('header',{
+	height: '50vh'
+});
+TweenMax.set('header h1',{
+	marginTop: '2vh',
+	opacity: 0
+});
+TweenMax.set('.login form, .login footer',{
+	transformOrigin: '0 0',
+	marginTop: '2vh',
+	opacity: 0
+});
+
+
