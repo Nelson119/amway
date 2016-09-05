@@ -10,6 +10,11 @@ app.partial.bonus = function(){
 	//取得月份資料
 	$('.bonus.monthly select[name=month]').on('change', function(){
 		if(!$('.bonus.monthly select[name=month]').val()){
+			$('.bonus.monthly .detail .result').addClass('hide').removeClass('in');
+			$('.bonus.monthly .detail .notfound').removeClass('hide');
+			setTimeout(function(){
+				$('.bonus.monthly .detail .notfound').addClass('in');
+			}, 200);
 			return false;
 		}
 		var month = $('.bonus.monthly select[name=month]').val(); // ex: '2016,1' , '2015,10'
@@ -41,6 +46,11 @@ app.partial.bonus = function(){
 	//取得月份資料
 	$('.bonus.yearly select[name=category]').on('change', function(){
 		if(!$('.bonus.yearly select[name=category]').val()){
+			$('.bonus.yearly .detail .result').addClass('hide').removeClass('in');
+			$('.bonus.yearly .detail .notfound').removeClass('hide');
+			setTimeout(function(){
+				$('.bonus.yearly .detail .notfound').addClass('in');
+			}, 200);
 			return false;
 		}
 		var cat = $('.bonus.yearly select[name=category]').val(); // ex: '2016,1' , '2015,10'
