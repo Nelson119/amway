@@ -171,6 +171,38 @@ body.section {
         }
 	}
 
+	.overlay-banner{
+		padding-top: 5vh;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top:0;
+		left:0;
+		z-index: 9999;
+		text-align: center;
+		background: #ededed;
+		color: #004374;
+
+		.app-icon{
+			height: 40vh;
+			vertical-align: middle;
+			line-height: 40vh;
+			img{
+				display: inline-block;
+				width: 30vw;
+			}
+		}
+		.btn-default{
+			margin: 2vh;
+		}
+		&.fade{
+			transform: scale(0.85);
+			&.in{
+				transform: scale(1);
+				transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s;
+			}
+		}
+	}
 }
 
 html{

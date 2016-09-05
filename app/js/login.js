@@ -34,7 +34,7 @@ app.partial.login = function(){
             // }, function () {
             //     setTimeout(function () { location.href = 'renew.aspx'; }, 100);
             // });
-
+    //進場動態
 	TweenMax.to('header h1', 1, {
 		opacity: 1,
 		marginTop: 0,
@@ -50,7 +50,24 @@ app.partial.login = function(){
 		delay: 1.5,
 		scaleY: 1
 	});
+
+    //amcard 蓋版
+	(function(){
+		var cookieName = 'showMobileWebOverlayBanner';
+
+		if($.cookie(cookieName)){
+			$.cookie(cookieName, 'true', { path: './', expires: 7 });
+			return;
+		}else{
+			$('.overlay-banner').removeClass('hide');
+			setTimeout(function(){
+				$('.overlay-banner').addClass('in');
+			}, 200);
+			$.cookie(cookieName, 'true', { path: './', expires: 7 });
+		}
+	}());
 };
+//進場動態初始化
 TweenMax.set('header',{
 	height: '50vh'
 });
