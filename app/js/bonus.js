@@ -7,6 +7,19 @@
 /*global app, $ */
 app.partial.bonus = function(){
 
+	var today = moment();
+	for (var i = 0; i < 13; i++)
+	{
+		today.add(-1, 'month'); 
+		var month = today.month() + 1;
+		var str = today.year() + '年' + month + '月';
+		var val = today.year() + ',' + month;
+		var opt = document.createElement('option');
+		$(opt).val(val).html(str);
+		$('[name=month]').append(opt);
+		console.log(opt);
+	}
+
 	//取得月份資料
 	$('.bonus.monthly select[name=month]').on('change', function(){
 		if(!$('.bonus.monthly select[name=month]').val()){

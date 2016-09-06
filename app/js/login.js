@@ -47,8 +47,7 @@ app.partial.login = function(){
     TweenMax.to('.login form, .login footer', 1.2, {
     	marginTop: 0,
     	opacity: 1,
-		delay: 1.5,
-		scaleY: 1
+		delay: 1.5
 	});
 
     //amcard 蓋版
@@ -69,14 +68,19 @@ app.partial.login = function(){
 };
 //進場動態初始化
 TweenMax.set('header',{
+	transfromOrigin: '0 0 50px',
+	'-webkit-backface-visibility': 'hidden',
 	height: '50vh'
 });
 TweenMax.set('header h1',{
+	transfromOrigin: '0 0 50px',
+	'-webkit-backface-visibility': 'hidden',
 	marginTop: '2vh',
 	opacity: 0
 });
 TweenMax.set('.login form, .login footer',{
-	transformOrigin: '0 0',
+	transfromOrigin: '0 0 50px',
+	'-webkit-backface-visibility': 'hidden',
 	marginTop: '2vh',
 	opacity: 0
 });

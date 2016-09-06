@@ -27,7 +27,7 @@
 		border-bottom: 1px solid #b6b6b6;
 		line-height: vwxs(35);
 		padding: 0 vwxs(40);
-		font-weight: lighter;
+		// font-weight: lighter;
 		position: relative;
 		.name{
 			color: #008fc5;
@@ -46,6 +46,7 @@
 	}
 
 	svg{
+		transform: rotateZ(90deg) rotateY(-180deg);
 		width: vwxs(183);
 		margin: 0 auto;
 		display: block;

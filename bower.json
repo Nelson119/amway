@@ -7,7 +7,9 @@
     "font-awesome": "fontawesome#^4.6.3",
     "detectizr": "^2.2.0",
     "gsap": "^1.19.0",
-    "jquery.cookie": "^1.4.1"
+    "jquery.cookie": "^1.4.1",
+    "moment": "momentjs#^2.14.1",
+    "json2": "*"
   },
   "overrides": {
     "bootstrap-sass": {

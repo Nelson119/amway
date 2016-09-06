@@ -69,19 +69,6 @@
                   <section>
                     <select name="month" class="form-control">
                       <option value="">請選擇月份</option>
-                        <script>
-                            var yearint = new Date().getYear() + 1900;
-                            var monthint = new Date().getMonth() + 1;
-
-                            for (var i = 0; i < 13; i++)
-                            {
-                                var str = ( monthint - i > 0) ? yearint + ' 年 ' + (monthint - i) + '月' :
-                                  (yearint - 1) + ' 年 ' + (monthint - i + 12) + '月';
-                                var val = ( monthint - i > 0) ? yearint + ',' + (monthint - i) :
-                                  (yearint - 1) + ',' + (monthint - i + 12);
-                                document.write("<option value="+val+">"+str+"</option>");
-                            }
-                        </script>
                     </select>
                   </section>
                 </aside>
@@ -268,6 +255,8 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/json2/json2.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

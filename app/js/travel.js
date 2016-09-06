@@ -13,33 +13,34 @@ app.partial.travel = function(){
 
 		if(!travel.hasClass('on')){
 			travel.addClass('on').siblings().removeClass('on');
-			if(perc === 0){
-				return;
-			}
-
-
+			$('figcaption span:eq(1)', travel).html(perc);
 			$('svg circle', travel).css('stroke-dashoffset', perc);
 			$('svg circle', travel.siblings()).css('stroke-dashoffset', 0);
-			$('figcaption span:eq(1)', travel.siblings()).html(0);
+			// if(perc === 0){
+			// 	return;
+			// }
 
-			var tl = new TimelineMax({
-				onComplete: function(){
-					var t = $('figcaption span:eq(1)', travel).html() * 100;
-					if(t < perc * 100){
-						tl.seek(0);
-						tl.play();
-					}else{
-						 $('figcaption span:eq(1)', travel).html(perc);
-					}
-				}
-			});
 
-			tl.addPause(1 / perc / 10000, next);
-			function next(){
-				var t = Math.round($('figcaption span:eq(1)', travel).html() * 100);
-				var p = ((t + 53) / 100).toString().replace(/^(.*\.\d{0,2})\d*/i, '$1');
-				$('figcaption span:eq(1)', travel).html(p);
-			}
+			// $('figcaption span:eq(1)', travel.siblings()).html(0);
+
+			// var tl = new TimelineMax({
+			// 	onComplete: function(){
+			// 		var t = $('figcaption span:eq(1)', travel).html() * 100;
+			// 		if(t < perc * 100){
+			// 			tl.seek(0);
+			// 			tl.play();
+			// 		}else{
+			// 			 $('figcaption span:eq(1)', travel).html(perc);
+			// 		}
+			// 	}
+			// });
+
+			// tl.addPause(1 / perc / 10000, next);
+			// function next(){
+			// 	var t = Math.round($('figcaption span:eq(1)', travel).html() * 100);
+			// 	var p = ((t + 53) / 100).toString().replace(/^(.*\.\d{0,2})\d*/i, '$1');
+			// 	$('figcaption span:eq(1)', travel).html(p);
+			// }
 		} else{
 			travel.removeClass('on');
 			$('svg circle', travel).css('stroke-dashoffset', 0);
