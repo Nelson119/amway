@@ -20,61 +20,70 @@
         ga('myb.send', 'pageview');
     </script>
     <script>
-        var download_link, iframe, loadDateTime, redirected, scheme_link, t;
-        scheme_link = "mcard://";
-        download_link = "https://app.amwaynet.com.tw/amcard/index.aspx";
-        redirected = false;
-        (function () {
-            /*
-            if (navigator.userAgent.match(/FBIOS/i)) {
-            document.writeln("請按上或下方的箭頭，選擇「在 Safari 開啟」以繼續進行活動。");
-            return;
+        // var download_link, iframe, loadDateTime, redirected, scheme_link, t;
+        // scheme_link = "mcard://";
+        // download_link = "https://app.amwaynet.com.tw/amcard/index.aspx";
+        // redirected = false;
+        var custom = "mcard://";
+        var alt = "https://app.amwaynet.com.tw/amcard/index.aspx";
+        var g_intent = "intent://scan/#Intent;scheme=mcard;package=com.google.mcard.client.android;end";
+        var timer;
+        var heartbeat;
+        var iframe_timer;
+
+        function clearTimers() {
+            clearTimeout(timer);
+            clearTimeout(heartbeat);
+            clearTimeout(iframe_timer);
+        }
+
+        function intervalHeartbeat() {
+            if (document.webkitHidden || document.hidden) {
+                clearTimers();
             }
-            */
-            if (navigator.userAgent.match(/Windows Phone/i)) {
-                //
-                window.location = download_link;
-                //alert("若您看到錯誤畫面，請先安裝 youtube 喔！");
-            } else if (navigator.userAgent.match(/Android/i)) {
-                if (navigator.userAgent.match(/Chrome/i)) {
-                    if (+navigator.userAgent.match(/(chrome(?=\/))\/?\s*(\d+)/i)[2] >= 41) {
-                        window.location = "vnd.mcard://";
-                        setTimeout(function () {
-                            if (!document.webkitHidden && !redirected) {
-                                redirected = true;
-                                window.location = download_link;
-                            }
-                        }, 1000);
-                    } else {
-                        window.location = "vnd.mcard://";
-                        alert("若您看到錯誤畫面，請先安裝 mcard 喔！");
-                    }
-                } else {
-                    iframe = document.createElement("iframe");
-                    iframe.style.border = "none";
-                    iframe.style.width = "1px";
-                    iframe.style.height = "1px";
-                    t = setTimeout(function () {
-                        window.location = download_link;
-                    }, 1000);
-                    iframe.onload = function () {
-                        clearTimeout(t);
-                    };
-                    iframe.src = "vnd.mcard://";
-                    document.body.appendChild(iframe);
-                }
-            } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
-                setTimeout(function () {
-                    if (!document.webkitHidden) {
-                        window.location = download_link;
-                    }
-                }, 25);
-                window.location = "mcard://";
+        }
+
+        function tryIframeApproach() {
+            var iframe = document.createElement("iframe");
+            iframe.style.border = "none";
+            iframe.style.width = "1px";
+            iframe.style.height = "1px";
+            iframe.onload = function () {
+                document.location = alt;
+            };
+            iframe.src = custom;
+            document.body.appendChild(iframe);
+        }
+
+        function tryWebkitApproach() {
+            document.location = custom;
+            timer = setTimeout(function () {
+                document.location = alt;
+            }, 2500);
+        }
+
+        function useIntent() {
+            document.location = g_intent;
+        }
+
+        function launch_app_or_alt_url(el) {
+            heartbeat = setInterval(intervalHeartbeat, 200);
+            if (navigator.userAgent.match(/Chrome/)) {
+                useIntent();
+            } else if (navigator.userAgent.match(/Firefox/)) {
+                tryWebkitApproach();
+                iframe_timer = setTimeout(function () {
+                    tryIframeApproach();
+                }, 1500);
             } else {
-                //alert("桌機???");
-                window.location = download_link;
+                tryIframeApproach();
             }
-        }());
+        }
+
+        // $(".source_url").click(function (event) {
+            launch_app_or_alt_url(window);
+        //     event.preventDefault();
+        // });
     </script>
   </head>
   <body>
