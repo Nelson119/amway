@@ -59,6 +59,9 @@
 	figure{
 		position: relative;
 		padding-bottom: vwxs(20);
+		-webkit-margin-start: 0;
+		-webkit-margin-end: 0;
+
 	}
 
 	.detail .row{
@@ -82,7 +85,7 @@
 
 	figcaption{
 		position: absolute;
-		top: calc(50vw - 28vw);
+		top: calc(22vw);
 		left: calc(50% - 11.5vw);
 		span{
 			display: block;
