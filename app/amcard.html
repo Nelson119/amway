@@ -24,8 +24,9 @@
    
   </body>
     <script>
-        var download_link, iframe, loadDateTime, redirected, scheme_link, t;
+        var download_link, iframe, loadDateTime, redirected, scheme_link, t,
         scheme_link = "mcard://";
+        android_scheme_link = "vnd.mcard://";
         download_link = "https://app.amwaynet.com.tw/amcard/index.aspx";
         redirected = false;
         (function () {
@@ -38,11 +39,11 @@
             if (navigator.userAgent.match(/Windows Phone/i)) {
                 //
                 window.location = download_link;
-                //alert("若您看到錯誤畫面，請先安裝 youtube 喔！");
+                //alert("若您看到錯誤畫面，請先安裝 mcard 喔！");
             } else if (navigator.userAgent.match(/Android/i)) {
                 if (navigator.userAgent.match(/Chrome/i)) {
                     if (+navigator.userAgent.match(/(chrome(?=\/))\/?\s*(\d+)/i)[2] >= 41) {
-                        window.location = "vnd.mcard://";
+                        window.location = android_scheme_link;
                         setTimeout(function () {
                             if (!document.webkitHidden && !redirected) {
                                 redirected = true;
@@ -50,7 +51,7 @@
                             }
                         }, 2500);
                     } else {
-                        window.location = "vnd.mcard://";
+                        window.location = android_scheme_link;
                         alert("若您看到錯誤畫面，請先安裝 mcard 喔！");
                     }
                 } else {
