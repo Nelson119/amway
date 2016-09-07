@@ -130,7 +130,7 @@ html{
 	min-width: 320px;
 	.container{
 		min-width: 320px;
-		margin-top: 45px;
+		margin-top: vwxs(45);
 		overflow-y: hidden;
 	}
 	&.ie,&.firefox.windows{

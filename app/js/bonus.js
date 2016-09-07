@@ -7,7 +7,14 @@
 /*global app, $, moment */
 app.partial.bonus = function(){
 
+
+	//今天日期物件 使用momentjs日期工具
 	var today = moment();
+
+
+	//月份下拉選項：往前推13個月
+	//十日以前算上上個月
+	today.add(-10, 'day'); 
 	for (var i = 0; i < 13; i++)
 	{
 		today.add(-1, 'month'); 
@@ -17,7 +24,6 @@ app.partial.bonus = function(){
 		var opt = document.createElement('option');
 		$(opt).val(val).html(str);
 		$('[name=month]').append(opt);
-		console.log(opt);
 	}
 
 	//取得月份資料
