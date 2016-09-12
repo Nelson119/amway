@@ -47,6 +47,7 @@ $browser-lg-viewport: 1366; // Default
 
 @for $i from 11 to 44 {
 	.fontsize-#{$i} {
+    font-size: #{$i}px;
 		font-size: vwxs($i);
 	}
 }

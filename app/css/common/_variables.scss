@@ -83,12 +83,15 @@ $browser-lg-viewport: 1366; // Default
 // @media screen and (max-width: 320px) {
 	@for $i from 6 to 150 {
 		.fontsize-xs-#{$i} {
+			font-size: #{$i}px;
 			font-size: vwxs($i);
 		}
 		.form-control.fontsize-xs-#{$i} {
+			font-size: #{$i}px;
 			font-size: vwxs($i);
 		}
 		.fontsize-xs-#{$i} .form-control {
+			font-size: #{$i}px;
 			font-size: vwxs($i);
 		}
 	}
