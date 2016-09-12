@@ -63,7 +63,9 @@ body.section {
 	text-rendering: optimizelegibility;
 	font-family: $main-font,cursive;
 	font-size: $base-font-size;
+	letter-spacing: 1px;
 	letter-spacing: vwxs(1);
+	word-spacing: 1px;
 	word-spacing: vwxs(1);
 	overflow-x:hidden;
 	color: $font-default-color;
@@ -132,22 +134,31 @@ body.section {
 
 	#confirm{
         background: rgba(0,0,0,0.8);
+        width: 65%;
         width: 65vw;
+        height: 325px;
         height: 101.5vw;
+        left: 17.5%;
         left: 17.5vw;
         border-radius: 10px;
+        padding: 70px 1.6px 0;
         padding: 21.5vw 0.5vw 0;
         margin: 0;
 
         button{
+        	margin: 1.6px 0;
         	margin: 0.5vw 0;
         	max-width: 100%;
+        	height: 28.8px;
         	height: 9vw;
+        	line-height: 28.8px;
         	line-height: 9vw;
         }
         >.row{
         	position: absolute;
+        	bottom: 16px;
         	bottom: 5vw;
+        	margin: 0 6.4px;
         	margin: 0 -2vw;
         }
         .text{
@@ -172,6 +183,7 @@ body.section {
 	}
 
 	.overlay-banner{
+		padding-top: 24px;
 		padding-top: 5vh;
 		width: 100%;
 		height: 100%;
@@ -184,15 +196,19 @@ body.section {
 		color: #004374;
 
 		.app-icon{
+			height: 192px;
 			height: 40vh;
 			vertical-align: middle;
+			line-height: 192px;
 			line-height: 40vh;
 			img{
 				display: inline-block;
+				width: 96px;
 				width: 30vw;
 			}
 		}
 		.btn-default{
+			margin: 9.6px;
 			margin: 2vh;
 		}
 		&.fade{

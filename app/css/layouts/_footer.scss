@@ -1,6 +1,7 @@
 
 /* Custom page header */
 footer {
+	height: 44px;
 	height: vwxs(44);
 	color: #56565a;
 	// font-weight:lighter;
@@ -9,6 +10,7 @@ footer {
 		&+a{
 			&:before{
 				content:'|   ';
+				padding: 0 5px;
 				padding: 0 vwxs(5);
 			}
 		}

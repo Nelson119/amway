@@ -7,13 +7,16 @@ input[type=text]{
 	border: 0;
 	color: inherit;
 	font-size: inherit;
+	line-height: 32px;
 	line-height: vwxs(32);
 	vertical-align: top;
+	margin: 0 0 0 40px;
 	margin: 0 0 0 vwxs(40) ;
 	// height: vwxs(24);
 	padding: 0;
 	font-family: inherit;
 	display:inline-block;
+	max-width:  200px;
 	max-width:  vwxs(200) ;
 	box-shadow: none;
 
@@ -33,7 +36,9 @@ input::-webkit-inner-spin-button {
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 .form-control-container{
+	border: 1px solid #fff;
 	border: vwxs(1) solid #fff;
+	border-radius: 5px;
 	border-radius: vwxs(5);
 	position: relative;
 	&+.form-control-container{
@@ -41,6 +46,10 @@ input::-webkit-inner-spin-button {
 	}
 	.icon{
 		position: absolute;
+		top: 6px;
+		left: 12px;
+		max-width: 22px;
+		max-height: 22px;
 		top: vwxs(6);
 		left: vwxs(12);
 		max-width: vwxs(22);
@@ -54,6 +63,7 @@ input::-webkit-inner-spin-button {
 	border-color: #f00;
 	background: rgba(255,0,0,0.1);
 	color: rgba(255,255,255,0.75);
+	border-radius: 5px;
 	border-radius: vwxs(5);
 	.form-control:focus{
 		box-shadow: none;
@@ -61,9 +71,12 @@ input::-webkit-inner-spin-button {
 }
 
 select.form-control{
+	border: 1px solid #fff;
 	border: vwxs(1) solid #fff;
+	border-radius: 5px;
 	border-radius: vwxs(5);
 	position: relative;
+	height:36px;
 	height:vwxs(36);
 	margin:0;
 	-webkit-appearance:none;
@@ -71,6 +84,7 @@ select.form-control{
 
 	option{
 		background: #1e5799;
+		border: 1px solid #1e5799;
 		border: vwxs(1) solid #1e5799;
 		&:hover{
 			color: #1e5799;
@@ -82,18 +96,23 @@ select.form-control{
 .btn-default{
     background: #004374 none repeat scroll 0 0;
     border: 0 none;
+    border-radius: 4.26px;
     border-radius: 1.33333vw;
     color: #fff;
     display: inline-block;
     font-family: inherit;
+    height: 51.2px;
     height: 16vw;
+    line-height: 51.2px;
     line-height: 16vw;
+    margin: 23px 0;
     margin: 7.2vw 0;
     padding: 0;
     position: relative;
     text-align: center;
     transition: background 0.2s ease-out 0s;
     vertical-align: middle;
+    width: 192.853px;
     width: 60.2667vw;
 	&:focus{
 		outline: none;
@@ -102,51 +121,19 @@ select.form-control{
 		background: #003161 !important;
 		color: inherit !important;
 	}
-	// &:focus{
-	// 	padding:0;
-	// 	&:before{
-	// 		opacity: 1;	
-	// 	}
-	// 	&:after{
-	// 		border-color: rgba(0, 49, 97, .3);
-	// 	}
-	// }
-	// &:before{
-	// 	width: vwxs(120);
-	// 	height: vwxs(120);
-	// 	margin: vwxs(-6) 0 0 vwxs(-6);
-	// 	background: rgba(0, 49, 97, .5);
-	// 	content: '';
-	// 	position: absolute;
-	// 	border-radius: 50%;
-	// 	left:0;
-	// 	top:0;
-	// 	opacity: 0;
-	// 	z-index: -1;
-	// 	transition-duration: 0.3s;
-	// }
-	// &:after{
-	// 	width: vwxs(130);
-	// 	height: vwxs(130);
-	// 	margin: vwxs(-11) 0 0 vwxs(-11);
-	// 	border: vwxs(10) rgba(0, 49, 97, 0) solid;
-	// 	content: '';
-	// 	position: absolute;
-	// 	border-radius: 50%;
-	// 	left:0;
-	// 	top:0;
-	// 	transition-duration: 0.3s;
-	// 	transition-delay: 0.1s;
-	// }
 }
 .btn-container{
 	a{
-		padding:vwxs(0) vwxs(10) 0  vwxs(15);
+		padding: 0 10px 0  15px;
+		padding: 0 vwxs(10) 0  vwxs(15);
+		line-height: 20px;
 		line-height: vwxs(20);
+		height: 22px;
 		height: vwxs(22);
 		display: inline-block;
 
 		&+a{
+			border-left: 1px solid #fff;
 			border-left: vwxs(1) solid #fff;
 		}
 	}

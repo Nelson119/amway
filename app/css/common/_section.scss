@@ -2,9 +2,11 @@
 	.message{
 		font-weight: normal;
 		background-color: rgba(0,67,116,0.3);
+		padding: 21px 0;
 		padding: vwxs(21) 0;
 		text-align: center;
 		position: fixed;
+		bottom: 62px;
 		bottom: vwxs(62);
 		width: 100%;
 	}

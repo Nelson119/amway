@@ -61,7 +61,7 @@ $browser-lg-viewport: 1366; // Default
 }
 
 @function vwxs($pixels, $context: $browser-xs-viewport) {
-  @return #{$pixels/$context*100}vw;
+  @return #{$pixels/$context*100}vw; 
 }
 
 @function vwlg($pixels, $context: $browser-lg-viewport) {

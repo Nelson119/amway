@@ -1,17 +1,24 @@
 .travel {
 	background: #fff;
 	border: vwxs(1) solid #b6b6b6;
+	border: 1px solid #b6b6b6;
+	border-radius: 3px;
 	border-radius: vwxs(3);
-	margin-top:vwxs(20);
-	margin-left:vwxs(5);
-	margin-right:vwxs(5);
+	margin-top: 20px;
+	margin-top: vwxs(20);
+	margin-left: 5px;
+	margin-left: vwxs(5);
+	margin-right: 5px;
+	margin-right: vwxs(5);
 	color: #56565a;
 
+	height: 35px;
 	height: vwxs(35);
 	overflow: hidden;
 	transition: height 0.25s ease-out;
 
 	&.on{
+		height: 400px;
 		height: vwxs(400);
 		.cap{
 			.cls{
@@ -25,7 +32,9 @@
 	}
 	.cap{
 		border-bottom: 1px solid #b6b6b6;
+		line-height: 35px;
 		line-height: vwxs(35);
+		padding: 0  40px;
 		padding: 0 vwxs(40);
 		// font-weight: lighter;
 		position: relative;
@@ -35,9 +44,13 @@
 
 		.cls{
 			transition: transform 0.25s ease-out;
+			width: 25px;
 			width: vwxs(25);
+			height: 20px;
 			height: vwxs(20);
+			right: 3px;
 			right: vwxs(3);
+			top: 5px;
 			top: vwxs(5);
 			position: absolute;
 			background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWcluWxpF8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI5LjggMjUuNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjkuOCAyNS42OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjtzdHJva2U6IzgxODE4MTtzdHJva2Utd2lkdGg6MC40Njk3O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzgxODE4MTtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5zdDJ7ZmlsbDpub25lO308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLjIsMC4yaDI5LjR2MjAuNGMwLDIuNi0yLjEsNC43LTQuNyw0LjdoLTIwYy0yLjYsMC00LjctMi4xLTQuNy00LjdWMC4yeiIvPjxwb2x5bGluZSBjbGFzcz0ic3QxIiBwb2ludHM9IjcuMyw4LjcgMTQuNiwxOCAyMS45LDguOCAiLz48cmVjdCB4PSI2LjgiIHk9IjEwLjMiIGNsYXNzPSJzdDIiIHdpZHRoPSIxNS41IiBoZWlnaHQ9IjEwLjMiLz48L3N2Zz4=);
@@ -47,9 +60,11 @@
 
 	svg{
 		transform: rotateZ(90deg) rotateY(-180deg);
+		width: 183px;
 		width: vwxs(183);
 		margin: 0 auto;
 		display: block;
+		padding: 20px 0;
 		padding: vwxs(20) 0;
 		circle{
 			transition: stroke-dashoffset 1s ease-out 0.5s;
@@ -58,6 +73,7 @@
 
 	figure{
 		position: relative;
+		padding-bottom: 20px;
 		padding-bottom: vwxs(20);
 		-webkit-margin-start: 0;
 		-webkit-margin-end: 0;
@@ -65,6 +81,7 @@
 	}
 
 	.detail .row{
+		width: 230px;
 		width: vwxs(230);
 		margin: 0 auto;
 		span{
@@ -85,10 +102,13 @@
 
 	figcaption{
 		position: absolute;
+		top: 70.4px;
 		top: calc(22vw);
+		left: calc(50% - 36.8px);
 		left: calc(50% - 11.5vw);
 		span{
 			display: block;
+			width: 180px;
 			width: vwsm(180);
 			&.highlight{
 				color: #e99619;
@@ -100,6 +120,7 @@
 
 	.count{
 		display: inline-block;
+		width: 60px;
 		width: vwxs(60);
 	}
 	
