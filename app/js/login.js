@@ -52,18 +52,19 @@ app.partial.login = function(){
 
     //amcard 蓋版
 	(function(){
-		var cookieName = 'showMobileWebOverlayBanner';
+		// var cookieName = 'showMobileWebOverlayBanner';
 
-		if($.cookie(cookieName)){
-			$.cookie(cookieName, 'true', { path: './', expires: 7 });
-			return;
-		}else{
+		// if($.cookie(cookieName)){
+		// 	$.cookie(cookieName, 'true', { path: './', expires: 7 });
+		// 	return;
+		// }else{
 			$('.overlay-banner').removeClass('hide');
 			setTimeout(function(){
 				$('.overlay-banner').addClass('in');
 			}, 200);
-			$.cookie(cookieName, 'true', { path: './', expires: 7 });
-		}
+		// 	$.cookie(cookieName, 'true', { path: './', expires: 7 });
+		// }
+		$('.exit').on('click', function(){ $('.overlay-banner').addClass('hide');})
 	}());
 };
 //進場動態初始化
