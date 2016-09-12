@@ -64,7 +64,7 @@ app.partial.login = function(){
 			}, 200);
 		// 	$.cookie(cookieName, 'true', { path: './', expires: 7 });
 		// }
-		$('.exit').on('click', function(){ $('.overlay-banner').addClass('hide');})
+		$('.exit').on('click', function(){ $('.overlay-banner').addClass('hide');});
 	}());
 };
 //進場動態初始化
