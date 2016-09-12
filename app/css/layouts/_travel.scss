@@ -106,11 +106,11 @@
 		left:0;
 		margin-top: 22%;
 		margin-top: calc(22vw);
-		margin-left: calc(50% - 36.8px);
+		margin-left: 38.5%;
 		margin-left: calc(50% - 11.5vw);
 		span{
 			display: block;
-			width: 180px;
+			width: percentage(180/375);
 			width: vwsm(180);
 			&.highlight{
 				color: #e99619;
