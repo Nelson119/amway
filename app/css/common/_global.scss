@@ -120,12 +120,12 @@ body {
 	}
 
 	.blank{
-		color:#000;
+		color: #333;
 		height: 50%;
 		height: 50vh;
-		text-align: center;
-		line-height: 50vh;
-  		content: 'viewport-units-buggyfill; height: 50vh; line-height: 50vh;';
+		text-align: left;
+		line-height: 2.5em;
+  		// content: 'viewport-units-buggyfill; height: 50vh; line-height: 50vh;';
 	}
 
 }
