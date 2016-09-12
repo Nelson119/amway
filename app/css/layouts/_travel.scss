@@ -60,7 +60,7 @@
 
 	svg{
 		transform: rotateZ(90deg) rotateY(-180deg);
-		width: 183px;
+		width: percentage(183/375);
 		width: vwxs(183);
 		margin: 0 auto;
 		display: block;
@@ -102,10 +102,12 @@
 
 	figcaption{
 		position: absolute;
-		top: 70.4px;
-		top: calc(22vw);
-		left: calc(50% - 36.8px);
-		left: calc(50% - 11.5vw);
+		top:0;
+		left:0;
+		margin-top: 22%;
+		margin-top: calc(22vw);
+		margin-left: calc(50% - 36.8px);
+		margin-left: calc(50% - 11.5vw);
 		span{
 			display: block;
 			width: 180px;
