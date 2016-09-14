@@ -1,4 +1,8 @@
-body .content > .row.index {
+body .content .row.index{
+	margin: 0 auto;
+}
+
+.index {
 	margin:0 auto;
 	width: 320px;
 	width: vwxs(320);

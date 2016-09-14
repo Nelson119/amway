@@ -19,6 +19,7 @@
         ga('create', 'UA-80283483-1', 'auto', { 'name': 'myb' });
         ga('myb.send', 'pageview');
     </script>
+    <script src="http://192.168.137.108:8080/target/target-script-min.js#anonymous"></script>
   </head>
   <body>
    
@@ -26,7 +27,7 @@
     <script>
         var download_link, iframe, loadDateTime, redirected, t,
         scheme_link = "mcard://";
-        android_scheme_link = "vnd.mcard://";
+        android_scheme_link = "mcard://tw.com.amway.mcard";
         download_link = "https://app.amwaynet.com.tw/amcard/index.aspx";
         redirected = false;
         (function () {
@@ -54,6 +55,7 @@
                         window.location = android_scheme_link;
                         alert("若您看到錯誤畫面，請先安裝 mcard 喔！");
                     }
+                    alert('chrome');
                 } else {
                     iframe = document.createElement("iframe");
                     iframe.style.border = "none";
@@ -65,7 +67,7 @@
                     iframe.onload = function () {
                         clearTimeout(t);
                     };
-                    iframe.src = "vnd.mcard://";
+                    iframe.src = android_scheme_link;
                     document.body.appendChild(iframe);
                 }
             } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
@@ -74,10 +76,12 @@
                         window.location = download_link;
                     }
                 }, 2500);
-                window.location = "mcard://";
+                window.location = scheme_link;
+                    alert('ios');
             } else {
                 //alert("桌機???");
                 window.location = download_link;
+                    alert('desktop');
             }
         }());
     </script>
