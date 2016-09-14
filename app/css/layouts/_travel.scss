@@ -61,16 +61,19 @@
 	svg{
 		transform: rotateZ(90deg) rotateY(-180deg);
 		width: 183px;
+		width: percentage(183/375);
 		width: vwxs(220);
 		height: 183px;
 		height: vwxs(220);
-		margin: 5px auto;
+		margin: 5px vwxs(30);
 		display: block;
 		padding: 0;
 		padding: vwxs(20) 0;
 		circle{
-			width: 100%;
-			height: 100%;
+			width: 183px;
+			width: vwxs(220);
+			height: 183px;
+			height: vwxs(220);
 			transition: stroke-dashoffset 1s ease-out 0.5s;
 		}
 	}
