@@ -81,6 +81,16 @@
 			height: auto;
 		}
 	}
+
+	.exit{
+		font-size: 2em;
+		color: #004374;
+		position: absolute;
+		right: 10px;
+		right: vwxs(10);
+		top: 10px;
+		top: vwxs(10);
+	}
 }
 .verisign{
 	display: inline-block;

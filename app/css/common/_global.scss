@@ -112,7 +112,7 @@ body {
 	.content{
 		min-height: 460px;
 		min-height: calc(100% - 45px - 45px);
-		min-height: calc(100vh - 12vw - 12vw);
+		min-height: calc(100vh - 12vw - 25vw);
 		padding-bottom: 20px;
 		padding-bottom:vwxs(20);
 		>.row{
