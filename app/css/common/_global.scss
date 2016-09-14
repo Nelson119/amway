@@ -110,6 +110,7 @@ body {
 	}
 
 	.content{
+		min-height: 460px;
 		min-height: calc(100% - 45px - 45px);
 		min-height: calc(100vh - 12vw - 12vw);
 		padding-bottom: 20px;
